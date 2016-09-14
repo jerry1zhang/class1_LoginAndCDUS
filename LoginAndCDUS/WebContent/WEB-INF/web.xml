@@ -17,4 +17,28 @@
   	<servlet-name>LOGIN</servlet-name>
   	<url-pattern>/login</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>BOOKLIST</servlet-name>
+  	<servlet-class>CDUS.servlet.BookListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BOOKLIST</servlet-name>
+  	<url-pattern>/booklist</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>BOOKDEL</servlet-name>
+  	<servlet-class>CDUS.servlet.BookDelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BOOKDEL</servlet-name>
+  	<url-pattern>/bookdel</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>BOOKUP</servlet-name>
+  	<servlet-class>CDUS.servlet.BookUpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BOOKUP</servlet-name>
+  	<url-pattern>/bookup</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -8,5 +8,6 @@
 </head>
 <body>
 <a href="Login.jsp">登陆</a>
+<a href="booklist">书籍列表</a>
 </body>
 </html>
