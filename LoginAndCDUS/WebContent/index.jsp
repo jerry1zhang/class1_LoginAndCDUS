@@ -7,6 +7,6 @@
 <title>首页</title>
 </head>
 <body>
-
+<a href="Login.jsp">登陆</a>
 </body>
 </html>
