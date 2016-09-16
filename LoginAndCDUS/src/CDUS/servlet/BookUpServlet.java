@@ -35,7 +35,8 @@ public class BookUpServlet extends HttpServlet {
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		//将传来的值转成utf-8
+		req.setCharacterEncoding("utf-8");
 		String bid = req.getParameter("bid");
 		BookDaoImpl bd = new BookDaoImpl();
 		Book book = new Book();

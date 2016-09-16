@@ -41,4 +41,12 @@
   	<servlet-name>BOOKUP</servlet-name>
   	<url-pattern>/bookup</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>BOOKADD</servlet-name>
+  	<servlet-class>CDUS.servlet.BookAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BOOKADD</servlet-name>
+  	<url-pattern>/bookadd</url-pattern>
+  </servlet-mapping>
 </web-app>

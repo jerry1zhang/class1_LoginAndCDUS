@@ -36,6 +36,7 @@ public class BookListServlet extends HttpServlet {
 			out.println("<td><a href='bookup?bid="+book.getBid()+"'>更新</a><a href='bookdel?bid="+book.getBid()+"'>删除</a></td>");
 			out.println("</tr>");
 		}
+		out.println("<tr><td><a href='bookadd'>新增</a></td></tr>");
 		out.println("</table>");
 		out.println("</center>");
 		out.println("</body></html>");

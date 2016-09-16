@@ -20,14 +20,13 @@ public class BookDaoImpl implements BookDao {
 		boolean flag = false;
 		int n = 0;
 		try {
-			String sql = "insert into book(name,bDate,bPress,bAuthor,bValue,bookKindsNo) value(?,?,?,?,?,?)";
+			String sql = "insert into book(name,bDate,bPress,bAuthor,bValue,bookKindsNo) value(?,now(),?,?,?,?)";
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, book.getName());
-			ps.setDate(2, book.getbDate());
-			ps.setString(3, book.getbPress());
-			ps.setString(4, book.getbAuthor());
-			ps.setDouble(5, book.getbValue());
-			ps.setInt(6, book.getBookKindsNo());
+			ps.setString(2, book.getbPress());
+			ps.setString(3, book.getbAuthor());
+			ps.setDouble(4, book.getbValue());
+			ps.setInt(5, book.getBookKindsNo());
 			n = ps.executeUpdate();
 			if (n!=0) {
 				flag = true;
