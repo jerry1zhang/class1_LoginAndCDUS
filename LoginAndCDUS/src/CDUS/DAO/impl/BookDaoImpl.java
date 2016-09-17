@@ -161,5 +161,37 @@ public class BookDaoImpl implements BookDao {
 		dbh.closeConnection(rs, ps, conn);
 		return bList;
 	}
+	
+	public ArrayList<Object> selectBookByName(String name) {
+		DBhelper_mysql dbh = f.getDBhelper_mysql();
+		Connection conn = dbh.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		ArrayList<Object> bList = new ArrayList<Object>();
+		try {
+			String sql = "select b.bid,b.name,b.bDate,b.bPress,b.bAuthor,b.bValue,b.bookKindsNo,k.bookKindsName,b.status from book b,bookKinds k where b.bookKindsNo=k.bookKindsNo and b.name like concat('%',?,'%')";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, name);
+			rs = ps.executeQuery();
+			Book book;
+			while (rs.next()) {
+				book = f.getBook();
+				book.setBid(rs.getInt("bid"));
+				book.setName(rs.getString("name"));
+				book.setbDate(rs.getDate("bDate"));
+				book.setbPress(rs.getString("bPress"));
+				book.setbAuthor(rs.getString("bAuthor"));
+				book.setbValue(rs.getInt("bValue"));
+				book.setBookKindsNo(rs.getInt("bookKindsNo"));
+				book.setBookKindsName(rs.getString("bookKindsName"));
+				book.setStatus(rs.getInt("status"));
+				bList.add(book);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		dbh.closeConnection(rs, ps, conn);
+		return bList;
+	}
 
 }

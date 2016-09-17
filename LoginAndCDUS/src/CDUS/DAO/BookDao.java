@@ -12,5 +12,5 @@ public interface BookDao {
 	public boolean updateBookStatus(Book book);
 	public Book selectBook(Book  book);
 	public ArrayList<Object> selectBook();
-	
+	public ArrayList<Object> selectBookByName(String name);
 }

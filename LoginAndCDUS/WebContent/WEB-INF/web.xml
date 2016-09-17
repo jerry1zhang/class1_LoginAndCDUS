@@ -49,4 +49,12 @@
   	<servlet-name>BOOKADD</servlet-name>
   	<url-pattern>/bookadd</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>BOOKSEL</servlet-name>
+  	<servlet-class>CDUS.servlet.BookSelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BOOKSEL</servlet-name>
+  	<url-pattern>/booksel</url-pattern>
+  </servlet-mapping>
 </web-app>
