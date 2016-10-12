@@ -31,7 +31,6 @@ public class DBhelper_mysql {
 		try {
 			Class.forName(driver);
 			 conn = DriverManager.getConnection(url, uname, pwd);
-			 System.out.println(conn);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

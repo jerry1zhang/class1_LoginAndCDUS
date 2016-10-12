@@ -45,7 +45,7 @@ public class BookDaoImpl implements BookDao {
 		boolean flag = false;
 		int n = 0;
 		try {
-			String sql = "delect bid,name,bDate,bPress,bAuthor,bValue,bookKindsNo,status from book where bid = ?";
+			String sql = "delete from book where bid = ?";
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, book.getBid());
 			n = ps.executeUpdate();

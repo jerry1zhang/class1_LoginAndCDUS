@@ -16,7 +16,13 @@
 			return false;
 		}
 
-		$("#Form1").submit()
+		$("#Form1").submit();
+	}
+	function del(id) {
+		alert(id);
+		$("#bid").val(id);
+
+		$("#DelById").submit();
 	}
 </script>
 </head>
@@ -42,8 +48,13 @@
 						<td>${var.bDate}</td>
 						<td>${var.bPress}</td>
 						<td>${var.bAuthor}</td>
-						<td><a href="bookup?bid=${var.Bid}">更新</a>&nsbq;&nsbq;<a
-							href="bookdel?bid=${var.Bid}">删除</a></td>
+						<td>
+							<a href="bookup?bid=${var.Bid}">更新</a>&nbsp;&nbsp;
+							<a onclick="del('${var.Bid}');">删除</a>
+							<form id="DelById" method="post" action="bookdel">
+								<input type="hidden" name="bid" id="bid">
+							</form>
+						</td>
 					</tr>
 				</c:forEach>
 				<tr>

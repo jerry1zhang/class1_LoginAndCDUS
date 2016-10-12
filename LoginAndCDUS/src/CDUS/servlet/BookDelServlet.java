@@ -12,6 +12,11 @@ import CDUS.DAO.impl.BookDaoImpl;
 import CDUS.entity.Book;
 
 public class BookDelServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String bid = req.getParameter("bid");
@@ -24,6 +29,7 @@ public class BookDelServlet extends HttpServlet {
 		out.println("<html><head><title>Í¼ÊéÉ¾³ý</title></head><body>");
 		out.println("<center>");
 		if (flag) {
+			System.out.println("info:delete book "+bid);
 			out.println("É¾³ý³É¹¦£¡");
 		}else{
 			out.println("É¾³ýÊ§°Ü£¡");
